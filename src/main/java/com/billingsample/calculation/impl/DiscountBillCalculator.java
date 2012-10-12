@@ -56,9 +56,10 @@ public final class DiscountBillCalculator implements BillCalculator {
 	}
 
 	/**
-	 * 
+	 * Subtracts the flat discount from total bill amount. Flat discount is applied
+	 * for each 100 dollars in the total bill.
 	 * @param amount
-	 * @return
+	 * @return total amount after deducting any flat discounts
 	 */
 	private double applyFlatDiscount(double amount) {
 		int flatDiscount = (int) (amount / 100) * DISCOUNT_PER_HUNDRED;
